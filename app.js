@@ -405,7 +405,7 @@ window.addEventListener("load", () => {
     // Beri jeda sedikit (misal 800ms) agar animasi terlihat, lalu hilangkan
     setTimeout(() => {
       splash.classList.add("hidden");
-    }, 4900);
+    }, 4100);
   }
 });
 
