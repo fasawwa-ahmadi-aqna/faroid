@@ -404,3 +404,13 @@ if (btnKeLatihan) {
 renderKalkulatorInput();
 // Tampilkan materi terlebih dahulu; soal dimuat saat masuk tab latihan
 tampilkanTab("materi");
+
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash-screen");
+  if (splash) {
+    // Beri jeda sedikit (misal 800ms) agar animasi terlihat, lalu hilangkan
+    setTimeout(() => {
+      splash.classList.add("hidden");
+    }, 4900);
+  }
+});
