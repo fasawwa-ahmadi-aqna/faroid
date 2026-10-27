@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FazzQuranic - Faraid</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- fraction.js dari CDN -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/fraction.js@4.3.7/fraction.js"></script>-->
+  <script src="fraction.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📚 Latihan Ilmu Faraid</h1>
+    <p class="subtitle">Simulasi belajar waris Islam — baca materi, kerjakan latihan, coba kalkulator.</p>
+  </header>
+
+  <main>
+    <!-- Navigasi tab — selalu terlihat di kedua halaman -->
+    <nav class="materi-nav" id="navTab">
+      <button class="btn-tab active" data-tab="materi">📖 Materi</button>
+      <button class="btn-tab" data-tab="latihan">✏️ Latihan</button>
+    </nav>
+
+    <!-- ============ HALAMAN MATERI ============ -->
+    <section class="panel" id="panelMateri">
+      <h2>Dasar Hukum Faraid</h2>
+      <p>Ilmu faraid bersumber dari <strong>Al-Qur'an</strong> (terutama Q.S. An-Nisa' 11 & 12) dan <strong>Hadis Nabi</strong>.</p>
+      <blockquote class="ayat">
+        "Allah mensyariatkan bagimu tentang (pembagian pusaka untuk) anak-anakmu. Yaitu: bagian seorang anak lelaki sama dengan bagian dua orang anak perempuan; dan jika anak itu semuanya perempuan lebih dari dua, maka bagi mereka dua pertiga dari harta yang ditinggalkan; jika anak perempuan itu seorang saja, maka ia memperoleh separuh harta. Dan untuk dua orang ibu-bapak, bagi masing-masingnya seperenam dari harta yang ditinggalkan, jika yang meninggal itu mempunyai anak; jika orang yang meninggal tidak mempunyai anak dan ia diwarisi oleh ibu-bapaknya (saja), maka ibunya mendapat sepertiga; jika yang meninggal itu mempunyai beberapa saudara, maka ibunya mendapat seperenam. (Pembagian-pembagian tersebut di atas) sesudah dipenuhi wasiat yang ia buat atau (dan) sesudah dibayar hutangnya. (Tentang) orang tuamu dan anak-anakmu, kamu tidak mengetahui siapa di antara mereka yang lebih dekat (banyak) manfaatnya bagimu. Ini adalah ketetapan dari Allah. Sesungguhnya Allah Maha Mengetahui lagi Maha Bijaksana."
+        <cite>— Q.S. An-Nisa' 11</cite>
+      </blockquote>
+      <blockquote class="ayat">
+        "Dan bagimu (suami-suami) seperdua dari harta yang ditinggalkan oleh isteri-isterimu, jika mereka tidak mempunyai anak. Jika mereka (isteri-isterimu) mempunyai anak, maka kamu mendapat seperempat dari harta yang ditinggalkannya setelah dipenuhi wasiat yang mereka buat atau (dan setelah dibayar) hutangnya. Para isteri memperoleh seperempat harta yang kamu tinggalkan jika kamu tidak mempunyai anak. Jika kamu mempunyai anak, maka para isteri memperoleh seperdelapan dari harta yang kamu tinggalkan setelah dipenuhi wasiat yang kamu buat atau (dan setelah dibayar) hutang-hutangnya. Jika seseorang meninggal dunia, baik laki-laki maupun perempuan yang tidak meninggalkan ayah dan tidak meninggalkan anak, tetapi mempunyai seorang saudara laki-laki (seibu saja) atau seorang saudara perempuan (seibu saja), maka bagi masing-masing dari kedua jenis saudara itu seperenam harta. Tetapi jika saudara-saudara seibu itu lebih dari seorang, maka mereka bersekutu dalam yang sepertiga itu, sesudah dipenuhi wasiat yang dibuat olehnya atau setelah dibayar hutangnya dengan tidak memberi mudharat (kepada ahli waris). Allah menetapkan yang demikian itu sebagai syari'at yang benar-benar dari Allah, dan Allah Maha Mengetahui lagi Maha Penyayang."
+        <cite>— Q.S. An-Nisa' 12</cite>
+      </blockquote>
+	  <blockquote class="ayat">
+        "Mereka meminta fatwa kepadamu (tentang kalalah). Katakanlah: 'Allah memberi fatwa kepadamu tentang kalalah (yaitu): jika seorang meninggal dunia, dan ia tidak mempunyai anak dan mempunyai saudara perempuan, maka bagi saudaranya yang perempuan itu seperdua dari harta yang ditinggalkannya, dan saudaranya yang laki-laki mempusakai (seluruh harta saudara perempuan), jika ia tidak mempunyai anak; tetapi jika saudara perempuan itu dua orang, maka bagi keduanya dua pertiga dari harta yang ditinggalkan oleh yang meninggal. Dan jika mereka (ahli waris itu terdiri dari) saudara-saudara laki-laki dan perempuan, maka bahagian seorang saudara laki-laki sebanyak bahagian dua orang saudara perempuan. Allah menerangkan (hukum ini) kepadamu, supaya kamu tidak sesat. Dan Allah Maha Mengetahui segala sesuatu."
+        <cite>— Q.S. An-Nisa' 176</cite>
+      </blockquote>
+      <blockquote class="ayat">
+        "Berikanlah bagian-bagian yang telah ditentukan kepada yang berhak. Jika masih ada sisa, maka untuk kerabat laki-laki yang paling dekat."
+        <cite>— HR. Bukhari & Muslim</cite>
+      </blockquote>
+
+      <h2>📊 Tabel Ashabul Furud (Bagian Pasti)</h2>
+      <table class="materi-tabel">
+        <thead>
+          <tr><th>Bagian</th><th>Ahli Waris</th><th>Syarat</th></tr>
+        </thead>
+        <tbody>
+          <tr><td rowspan="5"><strong>1/2</strong></td><td>Suami</td><td>Tidak ada anak/cucu</td></tr>
+          <tr><td>Anak perempuan</td><td>Sendirian</td></tr>
+          <tr><td>Cucu perempuan</td><td>Sendirian</td></tr>
+          <tr><td>Saudara pr kandung</td><td>Sendirian</td></tr>
+          <tr><td>Saudara pr seayah</td><td>Sendirian, tidak ada sdr pr kandung</td></tr>
+          <tr><td rowspan="2"><strong>1/4</strong></td><td>Suami</td><td>Ada anak/cucu</td></tr>
+          <tr><td>Istri</td><td>Tidak ada anak/cucu</td></tr>
+          <tr><td><strong>1/8</strong></td><td>Istri</td><td>Ada anak/cucu</td></tr>
+          <tr><td rowspan="2"><strong>1/3</strong></td><td>Ibu</td><td>Tanpa anak & tanpa 2+ saudara</td></tr>
+          <tr><td>Saudara seibu (2+)</td><td>Tanpa far'u & ayah/kakek</td></tr>
+          <tr><td rowspan="4"><strong>2/3</strong></td><td>Anak perempuan (2+)</td><td>Tanpa anak lk</td></tr>
+          <tr><td>Cucu perempuan (2+)</td><td>Tanpa cucu lk</td></tr>
+          <tr><td>Saudara pr kandung (2+)</td><td>Tanpa sdr lk kandung</td></tr>
+          <tr><td>Saudara pr seayah (2+)</td><td>Tanpa sdr lk seayah</td></tr>
+          <tr><td rowspan="6"><strong>1/6</strong></td><td>Ibu</td><td>Ada anak/cucu atau 2+ saudara</td></tr>
+          <tr><td>Ayah</td><td>Ada anak/cucu</td></tr>
+          <tr><td>Kakek</td><td>Ada anak/cucu, tanpa ayah</td></tr>
+          <tr><td>Nenek</td><td>Tanpa ibu</td></tr>
+          <tr><td>Cucu perempuan (1)</td><td>Bersama 1 anak perempuan</td></tr>
+          <tr><td>Saudara seibu (1)</td><td>Tanpa far'u & ayah/kakek</td></tr>
+        </tbody>
+      </table>
+
+      <h2>🚫 Tabel Hijab (Penghalang)</h2>
+      <p><strong>Hijab Hirman</strong> — terhalang total (tidak dapat apa-apa):</p>
+      <table class="materi-tabel">
+        <thead><tr><th>Yang Terhalang</th><th>Penghalang</th></tr></thead>
+        <tbody>
+          <tr><td>Kakek</td><td>Ayah</td></tr>
+          <tr><td>Nenek (dari ibu)</td><td>Ibu</td></tr>
+          <tr><td>Nenek (dari ayah)</td><td>Ayah atau Ibu</td></tr>
+          <tr><td>Cucu laki-laki</td><td>Anak laki-laki</td></tr>
+          <tr><td>Cucu perempuan</td><td>Anak laki-laki, atau 2+ anak perempuan</td></tr>
+          <tr><td>Saudara kandung (lk/pr)</td><td>Anak lk, cucu lk, ayah</td></tr>
+          <tr><td>Saudara seayah (lk/pr)</td><td>Anak lk, cucu lk, ayah, sdr lk kandung</td></tr>
+          <tr><td>Saudara seibu</td><td>Far'u waris, ayah, kakek</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Hijab Nuqsan</strong> — bagian berkurang:</p>
+      <table class="materi-tabel">
+        <thead><tr><th>Ahli Waris</th><th>Normal</th><th>Berkurang</th><th>Penyebab</th></tr></thead>
+        <tbody>
+          <tr><td>Suami</td><td>1/2</td><td>1/4</td><td>Ada anak/cucu</td></tr>
+          <tr><td>Istri</td><td>1/4</td><td>1/8</td><td>Ada anak/cucu</td></tr>
+          <tr><td>Ibu</td><td>1/3</td><td>1/6</td><td>Ada anak/cucu atau 2+ saudara</td></tr>
+        </tbody>
+      </table>
+
+      <h2>👥 Tabel Ashabah (Ahli Waris Sisa)</h2>
+      <p>Ashabah menerima <strong>sisa</strong> setelah ashabul furud. Jika tidak ada sisa, mereka tidak dapat apa-apa.</p>
+
+      <p><strong>Urutan prioritas ashabah bin nafsi:</strong></p>
+      <table class="materi-tabel">
+        <thead><tr><th>No</th><th>Ahli Waris</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Anak laki-laki</td></tr>
+          <tr><td>2</td><td>Cucu laki-laki (dari anak lk)</td></tr>
+          <tr><td>3</td><td>Ayah</td></tr>
+          <tr><td>4</td><td>Kakek (dari ayah)</td></tr>
+          <tr><td>5</td><td>Saudara laki-laki kandung</td></tr>
+          <tr><td>6</td><td>Saudara laki-laki seayah</td></tr>
+          <tr><td>7</td><td>Anak laki-laki sdr kandung</td></tr>
+          <tr><td>8</td><td>Anak laki-laki sdr seayah</td></tr>
+          <tr><td>9</td><td>Paman kandung</td></tr>
+          <tr><td>10</td><td>Paman seayah</td></tr>
+          <tr><td>11</td><td>Anak laki-laki paman kandung</td></tr>
+          <tr><td>12</td><td>Anak laki-laki paman seayah</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Tiga jenis ashabah:</strong></p>
+      <table class="materi-tabel">
+        <thead><tr><th>Jenis</th><th>Definisi</th><th>Contoh</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Bin Nafsi</strong></td><td>Laki-laki, ashabah dengan sendirinya</td><td>Anak lk, cucu lk, sdr lk, paman</td></tr>
+          <tr><td><strong>Bil Ghair</strong></td><td>Perempuan menjadi ashabah karena bersama laki-laki (2:1)</td><td>Anak pr + anak lk; sdr pr + sdr lk</td></tr>
+          <tr><td><strong>Ma'al Ghair</strong></td><td>Perempuan menjadi ashabah bersama far'u waris perempuan</td><td>Sdr pr kandung + anak pr/cucu pr</td></tr>
+        </tbody>
+      </table>
+
+      <div class="materi-cta">
+        <p>Sudah paham? Uji pemahamanmu dengan latihan soal.</p>
+        <button class="btn-primary" id="btnKeLatihan">Mulai Latihan →</button>
+      </div>
+    </section>
+
+    <!-- ============ HALAMAN LATIHAN ============ -->
+    <div id="panelLatihan" hidden>
+      <!-- Panel Kontrol -->
+      <section class="panel kontrol">
+        <h2>Pilih Soal</h2>
+        <div class="row">
+          <label>
+            Sumber:
+            <select id="sumber">
+              <option value="bank">Bank Soal (10 soal)</option>
+              <option value="gen">Generator Acak</option>
+            </select>
+          </label>
+          <label id="wrapTemplate" style="display:none;">
+            Template:
+            <select id="template">
+              <option value="">— Acak —</option>
+              <option value="T1">T1: Pasangan tanpa anak</option>
+              <option value="T2">T2: Istri + anak laki-laki</option>
+              <option value="T3">T3: Ayah, ibu, anak laki-laki</option>
+              <option value="T4">T4: Ibu + anak perempuan (radd)</option>
+              <option value="T5">T5: Suami, ibu, 2 saudara pr (aul)</option>
+              <option value="T6">T6: Istri, ibu, ayah</option>
+            </select>
+          </label>
+          <button id="btnMuat" class="btn-primary">Muat Soal</button>
+        </div>
+      </section>
+
+      <!-- Panel Soal -->
+      <section class="panel soal" id="panelSoal" hidden>
+        <div class="soal-header">
+          <span class="badge" id="badgeId">—</span>
+          <span class="badge badge-kategori" id="badgeKategori">—</span>
+        </div>
+        <h2 id="judulSoal">—</h2>
+        <p id="pertanyaanSoal">—</p>
+
+        <div class="kasus">
+          <div class="kasus-item">
+            <span class="label">Harta Warisan</span>
+            <span class="nilai" id="nilaiHarta">—</span>
+          </div>
+          <div class="kasus-item">
+            <span class="label">Ahli Waris</span>
+            <span class="nilai" id="daftarAhliWaris">—</span>
+          </div>
+        </div>
+
+        <h3>Jawabanmu</h3>
+        <p class="hint">Isi pecahan (mis. <code>1/2</code>, <code>2/3</code>, <code>0.5</code>) atau ketik <code>sisa</code> untuk ashabah. Ketik <code>0</code> jika terhijab.</p>
+        <form id="formJawaban">
+          <div id="inputAhliWaris" class="input-grid"></div>
+          <div class="row row-aksi">
+            <button type="submit" class="btn-primary">Cek Jawaban</button>
+            <button type="button" id="btnPembahasan" class="btn-secondary">Lihat Pembahasan</button>
+          </div>
+        </form>
+
+        <!-- Hasil Validasi -->
+        <div id="hasilValidasi" class="hasil" hidden></div>
+
+        <!-- Pembahasan -->
+        <div id="pembahasan" class="pembahasan" hidden>
+          <h3>Pembahasan</h3>
+          <ol id="daftarPembahasan"></ol>
+        </div>
+      </section>
+
+      <!-- ============ KALKULATOR BEBAS ============ -->
+      <section class="panel" id="panelKalkulator">
+        <h2>🧮 Kalkulator Bebas</h2>
+        <p class="hint">
+          Masukkan harta dan ahli waris. Engine akan menghitung pembagian lengkap dengan langkah.
+          <br>⚠️ Cakupan: pasangan, anak, cucu (dari anak lk), ayah, ibu, kakek, nenek, saudara kandung/seayah/seibu.
+          Kasus langka (musyarakah, akdariyah, dzawil arham) belum ditangani.
+        </p>
+
+        <div class="row">
+          <label style="flex:1; min-width:200px;">
+            Total Harta (Rp)
+            <input type="text" id="inputHarta" placeholder="mis. 120000000" value="120000000" />
+          </label>
+          <button id="btnHitung" class="btn-primary">Hitung Faraid</button>
+        </div>
+
+        <h3>Ahli Waris</h3>
+        <div id="daftarAhliWarisKalk" class="kalk-grid"></div>
+
+        <div id="hasilKalkulator" class="hasil" hidden></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>⚠️ Hasil simulasi untuk belajar. Bukan pengganti putusan pengadilan agama.</p>
+  </footer>
+
+  <script src="validator.js"></script>
+  <script src="generator.js"></script>
+  <script src="soal-dasar.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
