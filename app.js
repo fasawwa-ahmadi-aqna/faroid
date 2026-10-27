@@ -399,12 +399,6 @@ if (btnKeLatihan) {
   btnKeLatihan.addEventListener("click", () => tampilkanTab("latihan"));
 }
 
-// ============ INIT ============
-// Render input kalkulator (aman dipanggil kapan saja setelah DOM siap)
-renderKalkulatorInput();
-// Tampilkan materi terlebih dahulu; soal dimuat saat masuk tab latihan
-tampilkanTab("materi");
-
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash-screen");
   if (splash) {
@@ -414,3 +408,10 @@ window.addEventListener("load", () => {
     }, 4900);
   }
 });
+
+// ============ INIT ============
+// Render input kalkulator (aman dipanggil kapan saja setelah DOM siap)
+renderKalkulatorInput();
+// Tampilkan materi terlebih dahulu; soal dimuat saat masuk tab latihan
+tampilkanTab("materi");
+
